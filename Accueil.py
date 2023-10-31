@@ -11,7 +11,9 @@ st.title("DATAMINDS DashBoard")
 st.write("Bienvenue sur mon tableau de bord interactif Forest Inovation !")
 # Charger mes données 
 carbon_data = pd.read_excel('carbon_data_imputed2.xlsx')
+carbon_data1 = pd.read_excel('gross_emission.xlsx')
 tc_data = pd.read_excel('tree-cover dataset.xlsx', sheet_name=5)
+tc_data1 = pd.read_excel('tree_cover_loss.xlsx')
 col1,col2 = st.columns(2)
 with col1:
     st.subheader("Données d'émission carbone")
@@ -24,9 +26,9 @@ st.subheader("Les indicateurs clés de performance")
 
 col1_1,col2_1 = st.columns(2)
 with col1_1:
-    moy_emi = carbon_data['taux_emissions_co2'].means(axis=0)
+    # moy_emi = carbon_data['taux_emissions_co2'].means(axis=0)
     st.subheader("Émission carbone")
-    st.write(f"emission moyenne départementale:{moy_emi}")
+    # st.write(f"emission moyenne départementale:{moy_emi}")
     
 with col2_1:
     st.subheader("Perte couverture Forestiére")
