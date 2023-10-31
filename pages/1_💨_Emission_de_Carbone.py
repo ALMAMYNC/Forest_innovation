@@ -12,8 +12,12 @@ carbon_data_simplified = pd.read_excel('gross_emission.xlsx')
 
 # Définir le titre et la description de la page
 st.set_page_config(layout="wide")
-st.title("Forest Innovation")
-st.write("Bienvenue sur le tableau de bord de l'emission de CO2 !")
+st.markdown("""
+<div style='background-color: #f5f5f5; padding: 10px; border-radius: 10px;'>
+    <h3 style='color: teal; text-align: center;' >Tableau de bord interactif de l'emission de CO2</h3>
+    
+</div>
+""", unsafe_allow_html=True)
 
 tableau_dashboard_code = """
         <iframe src="https://public.tableau.com/views/competion_ias/Tableau_Bord_Emission_CO2?:language=fr-FR&:display_count=n&:origin=viz_share_link&:showVizHome=no&:embed=true" width="100%" height="700" frameborder="0"></iframe>

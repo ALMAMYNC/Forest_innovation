@@ -2,7 +2,12 @@ import streamlit as st
 import pandas as pd
 
 ################################################################
-st.title(':bar_chart: Modele de prediction:')
+st.markdown("""
+<div style='background-color: #f5f5f5; padding: 10px; border-radius: 10px;'>
+    <h2 style='color: teal; text-align: center;' >Modele de prediction</h2>
+    
+</div>
+""", unsafe_allow_html=True)
 CO2_df = pd.read_excel("gross_emission.xlsx")
 TCL_df = pd.read_excel("tree_cover_loss.xlsx")
 CO2_df['year'] = pd.to_datetime(CO2_df['year'], format='%Y')
@@ -39,12 +44,19 @@ df = user_input(countries, regions, departments)
 st.write(df)
 col1, col2 = st.columns(2)
 with col1:
-    st.write("""
-             La prediction pour cette zone en perte de couverture forestiers est : 
-             19293 hectars
-             """)
+    st.markdown("""
+<div style='background-color: #f5f5f5; padding: 10px; border-radius: 10px;'>
+    <p style='color: black;' >La prediction pour cette zone en perte de couverture forestiers est : 
+             19293 hectars</h3>
+    
+</div>
+""", unsafe_allow_html=True)
+    
 with col2:
-    st.write("""
-              La prediction pour cette zone en terme d'emission de CO2 est : 
-              187646 tonnes/hectar
-              """)
+      st.markdown("""
+<div style='background-color: #f5f5f5; padding: 10px; border-radius: 10px;'>
+    <p style='color: black;' >La prediction pour cette zone en terme d'emission de carbone est : 
+             19293 hectars</h3>
+    
+</div>
+""", unsafe_allow_html=True)

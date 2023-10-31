@@ -7,8 +7,12 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 # Personnalisez le titre de la page
-st.title("Forest Innovation")
-st.write("Bienvenue sur le tableau de bord de perte de couverture !")
+st.markdown("""
+<div style='background-color: #f5f5f5; padding: 10px; border-radius: 10px;'>
+    <h3 style='color: teal; text-align: center;' >Tableau de bord interactif de la perte de couverture forestiere</h3>
+    
+</div>
+""", unsafe_allow_html=True)
 
 
 tableau_dashboard_code = """

@@ -10,9 +10,12 @@ carbon_data1 = pd.read_excel('carbon_data_imputed2.xlsx')
 carbon_data_simplified = pd.read_excel('gross_emission.xlsx')
 
 st.set_page_config(layout="wide")
-st.title("Forest Innovation")
-st.write("Bienvenue sur le tableau de bord de comparaison en emission CO2 et PCF !")
-
+st.markdown("""
+<div style='background-color: #f5f5f5; padding: 10px; border-radius: 10px;'>
+    <h3 style='color: teal; text-align: center;' >Tableau de bord interactif de correlation de la perte de couverture forestiere et emission CO2</h3>
+    
+</div>
+""", unsafe_allow_html=True)
 tableau_dashboard_code = """
         <iframe src="https://public.tableau.com/views/competion_ias/Tableaudebord1?:language=fr-FR&:display_count=n&:origin=viz_share_link&:showVizHome=no&:embed=true" width="100%" height="700" frameborder="0"></iframe>
 """
