@@ -60,3 +60,13 @@ with col2:
     
 </div>
 """, unsafe_allow_html=True)
+      
+
+# # Charger le modèle depuis le fichier pickle
+# with open('model_regress.pkl', 'rb') as model_file:
+#     model = pickle.load(model_file)
+# st.title('prediction')
+# # Saisie utilisateur pour la prédiction
+# user_input = st.number_input('Entrez une valeur :', min_value=0)
+# # Prédiction avec le modèle chargé
+# prediction = model.predict([[user_input]])[0]
